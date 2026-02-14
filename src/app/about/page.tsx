@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="bg-background min-h-screen">
+    <main className="bg-muted/20 min-h-screen">
       <Navbar />
       <SubHero
         title="Our Story"
@@ -18,7 +18,7 @@ export default function AboutPage() {
 
       <AboutSection />
 
-      <section className="py-24 bg-background">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[

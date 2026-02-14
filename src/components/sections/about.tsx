@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-background border-y border-white/5">
+    <section id="about" className="py-12 bg-muted/50 border-y border-white/5">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           <motion.div
@@ -23,7 +23,6 @@ export function About() {
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
             </div>
             {/* Boxed accent like in reference image */}
             <div className="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-primary/40 -z-10" />

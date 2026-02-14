@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   Facebook,
   Instagram,
-  Twitter,
+  X,
   Linkedin,
   Mail,
   Phone,
@@ -16,7 +16,7 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-background pt-24 pb-12 border-t border-border"
+      className="bg-card pt-24 pb-12 border-t border-border"
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -35,16 +35,28 @@ export function Footer() {
               you&apos;ll feel inspired and at home.&quot;
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="hover:text-primary transition-colors">
+              <Link
+                href="#"
+                className="flex size-10 items-center justify-center rounded-md border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+              >
                 <Facebook size={20} />
               </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
+              <Link
+                href="#"
+                className="flex size-10 items-center justify-center rounded-md border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+              >
                 <Instagram size={20} />
               </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
-                <Twitter size={20} />
+              <Link
+                href="#"
+                className="flex size-10 items-center justify-center rounded-md border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+              >
+                <X size={20} />
               </Link>
-              <Link href="#" className="hover:text-primary transition-colors">
+              <Link
+                href="#"
+                className="flex size-10 items-center justify-center rounded-md border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+              >
                 <Linkedin size={20} />
               </Link>
             </div>

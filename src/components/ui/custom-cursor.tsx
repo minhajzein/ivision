@@ -97,7 +97,8 @@ export function CustomCursor() {
       />
       <div
         ref={followerRef}
-        className="fixed top-0 left-0 w-10 h-10 border border-primary/50 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-10 h-10 border-2 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        style={{ borderColor: 'white' }}
       />
     </>
   );

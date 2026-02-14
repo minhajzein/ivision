@@ -190,11 +190,11 @@ export default function ServiceDetailPage({
   const TitleIcon = data.icon;
 
   return (
-    <main className="bg-background min-h-screen text-foreground">
+    <main className="bg-muted/20 min-h-screen text-foreground">
       <Navbar />
       <SubHero title={data.title} subtitle={data.desc} />
 
-      <section className="py-24">
+      <section className="py-12 bg-card/50">
         <div className="container mx-auto">
           <Link
             href="/services"
@@ -252,7 +252,6 @@ export default function ServiceDetailPage({
 
             <div className="flex-1">
               <div className="relative aspect-video lg:aspect-square rounded-sm overflow-hidden border border-white/5 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 z-10" />
                 <Image
                   src={data.image}
                   alt={data.title}

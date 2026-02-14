@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   return (
-    <main className="bg-background min-h-screen">
+    <main className="bg-muted/20 min-h-screen">
       <Navbar />
       <SubHero
         title="Get in Touch"
@@ -16,7 +16,7 @@ export default function ContactPage() {
         variant="cinematic"
       />
 
-      <section className="py-24">
+      <section className="py-12 bg-card/50">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-20">
             {/* Contact Form Placeholder */}

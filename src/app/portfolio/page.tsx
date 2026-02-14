@@ -13,40 +13,39 @@ const projects = [
     category: "Interior",
     title: "Luxury Villa",
     location: "Riyadh",
-    image: "/interior_design_red_black_png_1770067816051.png",
-    isLocal: true,
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800",
+    isLocal: false,
   },
   {
     id: 2,
     category: "Events",
     title: "Corporate Summit",
     location: "Jeddah",
-    image: "/event_management_red_black_png_1770067847667.png",
-    isLocal: true,
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800",
+    isLocal: false,
   },
   {
     id: 3,
     category: "Media",
     title: "TV Commercial",
     location: "Dammam",
-    image: "/media_production_red_black_png_1770067832500.png",
-    isLocal: true,
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800",
+    isLocal: false,
   },
   {
     id: 4,
     category: "Interior",
     title: "Modern Office",
     location: "NEOM",
-    image: "/corporate-office.png",
-    isLocal: true,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800",
+    isLocal: false,
   },
   {
     id: 5,
     category: "Events",
     title: "Gala Dinner",
     location: "Riyadh",
-    image:
-      "https://images.unsplash.com/photo-1540575861501-7ad05823123d?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800",
     isLocal: false,
   },
   {
@@ -54,8 +53,7 @@ const projects = [
     category: "Media",
     title: "Product Launch",
     location: "Riyadh",
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800",
     isLocal: false,
   },
 ];
@@ -68,7 +66,7 @@ export default function PortfolioPage() {
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <main className="bg-background min-h-screen text-foreground">
+    <main className="bg-muted/20 min-h-screen text-foreground">
       <Navbar />
       <SubHero
         title="Our Portfolio"
@@ -76,7 +74,7 @@ export default function PortfolioPage() {
         variant="cinematic"
       />
 
-      <section className="py-24">
+      <section className="py-12 bg-card/50">
         <div className="container mx-auto">
           <div className="flex flex-wrap gap-4 mb-16">
             {categories.map((cat) => (
@@ -116,7 +114,7 @@ export default function PortfolioPage() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 z-10">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 z-10">
                   <span className="text-primary font-bold text-sm mb-2 uppercase tracking-widest">
                     {project.category}
                   </span>

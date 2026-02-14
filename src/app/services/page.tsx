@@ -91,14 +91,14 @@ const allServices = [
 
 export default function ServicesPage() {
 	return (
-		<main className='bg-background min-h-screen'>
+		<main className='bg-muted/20 min-h-screen'>
 			<Navbar />
 			<SubHero
 				title='Our Services'
 				subtitle='Comprehensive solutions for media, events, and interior design across Saudi Arabia.'
 			/>
 
-			<section className='py-24'>
+			<section className='py-12 bg-card/50'>
 				<div className='container mx-auto'>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{allServices.map((service, i) => (
@@ -120,7 +120,6 @@ export default function ServicesPage() {
 										fill
 										className='object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700'
 									/>
-									<div className='absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent z-10' />
 
 									<div className='relative z-20 h-full flex flex-col w-full'>
 										<div className='w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500'>

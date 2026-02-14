@@ -31,7 +31,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="py-32 bg-background relative overflow-hidden"
+      className="py-16 bg-secondary relative overflow-hidden"
     >
       <div className="container mx-auto">
         <div className="mb-20 uppercase">
@@ -61,7 +61,6 @@ export function Services() {
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
 
               <Link
                 href={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}

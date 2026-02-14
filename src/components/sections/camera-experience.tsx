@@ -44,7 +44,7 @@ export function CameraExperience() {
   return (
     <section
       ref={sectionRef}
-      className="py-40 bg-black relative overflow-hidden flex items-center justify-center min-h-[80vh]"
+      className="py-20 bg-black relative overflow-hidden flex items-center justify-center min-h-[80vh]"
     >
       {/* Full Screen Flash Overlay */}
       <div

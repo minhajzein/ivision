@@ -27,7 +27,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="py-32 bg-background relative">
+    <section className="py-16 bg-muted/30 relative">
       <div className="container mx-auto">
         <div className="mb-24 uppercase">
           <span className="text-primary font-bold tracking-[0.3em] text-sm mb-4 block">
@@ -47,7 +47,7 @@ export function Process() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group relative p-8 border border-white/5 bg-secondary/5 hover:border-primary/30 transition-all duration-500 rounded-2xl"
+              className="group relative p-8 border bg-primary/5 border-white/30 hover:border-primary/60 transition-all duration-500 rounded-2xl"
             >
               <div className="text-4xl font-black text-white/10 group-hover:text-primary/20 transition-colors mb-8">
                 {step.no}
@@ -61,7 +61,7 @@ export function Process() {
 
               {/* Connector line for large screens */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[1px] bg-white/5 z-10" />
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-white/5 z-10" />
               )}
             </motion.div>
           ))}

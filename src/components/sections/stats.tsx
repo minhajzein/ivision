@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 const stats = [
   { label: "PROJECTS DELIVERED", value: 250, suffix: "+" },
-  { label: "MAJOR CITIES", value: 12, suffix: " KSA" },
+  { label: "MAJOR CITIES", value: 12, suffix: "+" },
   { label: "TEAM EXPERTS", value: 45, suffix: "+" },
   { label: "YEARS EXP", value: 15, suffix: "+" },
 ];
@@ -36,7 +36,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="py-24 bg-background border-b border-white/5 relative overflow-hidden">
+    <section className="py-12 bg-card border-b border-white/5 relative overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {stats.map((stat, i) => (

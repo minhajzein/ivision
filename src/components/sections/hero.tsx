@@ -168,7 +168,6 @@ export function Hero() {
 				<div className='hero-image-container w-full h-full relative z-0 origin-center'>
 					<div className="hero-inner-image w-full h-full bg-[url('/hero-background-2.png')] bg-cover bg-center" />
 				</div>
-				<div className='absolute inset-0 bg-linear-to-b from-background/0 via-background/40 to-background z-10' />
 
 				{/* Animated Glows */}
 				<div className='glow-1 absolute top-[20%] left-[10%] w-[40vw] h-[40vw] bg-primary/20 blur-[120px] rounded-full z-1' />

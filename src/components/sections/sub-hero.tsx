@@ -133,7 +133,7 @@ export function SubHero({
   }, [variant]);
 
   return (
-    <section className="min-h-[70vh] flex items-center bg-background border-b border-white/5 relative overflow-hidden group py-32">
+    <section className="min-h-[70vh] flex items-center bg-secondary/80 border-b border-white/5 relative overflow-hidden group py-16">
       {/* Cinematic Background Animation */}
       <div
         ref={visualRef}

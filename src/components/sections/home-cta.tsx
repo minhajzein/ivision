@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function HomeCTA() {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-16 bg-secondary relative overflow-hidden">
       {/* Background abstract element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full" />
 

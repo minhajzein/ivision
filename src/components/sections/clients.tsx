@@ -15,7 +15,7 @@ const clients = [
 
 export function Clients() {
   return (
-    <section className="py-24 bg-background border-y border-white/5 overflow-hidden">
+    <section className="py-12 bg-muted/40 border-y border-white/5 overflow-hidden">
       <div className="container mx-auto px-4 mb-16">
         <span className="text-[10px] font-black tracking-[0.4em] text-white/30 uppercase text-center block">
           TRUSTED BY VISIONARY LEADERS
