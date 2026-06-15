@@ -300,7 +300,7 @@ export default function ArchitectureService() {
             {/* Specs list */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <Layers color="#ea2032" size={20} flexShrink={0} />
+                <span style={{ flexShrink: 0, display: 'flex' }}><Layers color="#ea2032" size={20} /></span>
                 <span style={{
                   fontFamily: 'var(--font-ui)', fontSize: 10, fontWeight: 700,
                   letterSpacing: '3px', textTransform: 'uppercase', color: '#ea2032',
