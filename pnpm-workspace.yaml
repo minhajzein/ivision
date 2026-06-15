@@ -1,0 +1,13 @@
+allowBuilds:
+  sharp: true
+
+onlyBuiltDependencies:
+  - sharp
+
+ignoredBuiltDependencies:
+  - sharp
+
+pnpm:
+  auditConfig:
+    minimumReleaseAge: 0
+  confirmModulesPurge: false
