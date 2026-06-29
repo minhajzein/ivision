@@ -6,14 +6,12 @@ export default function About() {
   return (
     <section className="section-pad" style={{ background: '#fff', overflow: 'hidden' }}>
       <div className="container">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(12, 1fr)',
+        <div className="grid-12" style={{
           gap: 'clamp(2rem,5vw,5rem)',
           alignItems: 'center',
         }}>
           {/* Left: Visual block */}
-          <div className="fade-up" style={{ gridColumn: 'span 5', position: 'relative', minHeight: 400 }}>
+          <div className="fade-up col-span-5" style={{ position: 'relative', minHeight: 400 }}>
             {/* Giant watermark */}
             <div style={{
               position: 'absolute', top: -40, left: -20,
@@ -87,7 +85,7 @@ export default function About() {
           </div>
 
           {/* Right: 2×2 Feature Grid */}
-          <div style={{ gridColumn: 'span 7', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+          <div className="col-span-7 grid-2-col" style={{ gap: 20 }}>
             {[
               {
                 num: '01', label: 'Unified Delivery',
@@ -162,8 +160,8 @@ export default function About() {
 
       <style>{`
         @media(max-width:900px){
-          [style*="gridColumn: span 5"]{grid-column:span 12 !important;}
-          [style*="gridColumn: span 7"]{grid-column:span 12 !important;}
+          .col-span-5, .col-span-7 { grid-column: span 1 !important; }
+          .fade-up.col-span-5 { min-height: 280px !important; }
         }
       `}</style>
     </section>

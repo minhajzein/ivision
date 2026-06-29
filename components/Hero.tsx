@@ -121,7 +121,7 @@ export default function Hero() {
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%', zIndex: 2, background: 'linear-gradient(to top, rgba(10,10,10,1), transparent)' }} />
 
       {/* Giant background text */}
-      <div style={{
+      <div className="hero-watermark" style={{
         position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)',
         fontFamily: 'var(--font-display)',
         fontSize: 'clamp(8rem,20vw,22rem)',
@@ -170,8 +170,8 @@ export default function Hero() {
               fontSize: 'clamp(2.75rem, 5.5vw, 5.25rem)',
             }}
           >
-            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>From&nbsp;Vision</span>
-            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
+            <span className="hero-headline-nowrap" style={{ display: 'block', whiteSpace: 'nowrap' }}>From&nbsp;Vision</span>
+            <span className="hero-headline-nowrap" style={{ display: 'block', whiteSpace: 'nowrap' }}>
               to&nbsp;<span style={{ color: '#ea2032' }}>Reality.</span>
             </span>
           </h1>
@@ -185,10 +185,11 @@ export default function Hero() {
             textTransform: 'uppercase',
             color: 'rgba(255,255,255,0.5)',
             marginBottom: 40,
-            height: 20,
+            minHeight: 20,
             display: 'flex',
             alignItems: 'center',
             gap: 12,
+            flexWrap: 'wrap',
           }}>
             <span>We specialize in</span>
             <span style={{
@@ -228,7 +229,7 @@ export default function Hero() {
         </div>
 
         {/* ── RIGHT: 3D iVision Orb ── */}
-        <div style={{
+        <div className="hero-orb-wrap" style={{
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
@@ -274,7 +275,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div style={{
+      <div className="hero-scroll-indicator" style={{
         position: 'absolute',
         bottom: 40,
         right: 60,

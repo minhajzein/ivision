@@ -1,7 +1,22 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+function useFinePointer() {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const update = () => setEnabled(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  return enabled;
+}
 
 export default function Cursor() {
+  const finePointer = useFinePointer();
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const mousePos = useRef({ x: -100, y: -100 });
@@ -9,6 +24,7 @@ export default function Cursor() {
   const rafRef = useRef<number>(0);
 
   useEffect(() => {
+    if (!finePointer) return;
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
@@ -68,12 +84,15 @@ export default function Cursor() {
       cancelAnimationFrame(rafRef.current);
       observer.disconnect();
     };
-  }, []);
+  }, [finePointer]);
+
+  if (!finePointer) return null;
 
   return (
     <>
       <div
         ref={dotRef}
+        className="cursor-dot"
         style={{
           width: 8, height: 8,
           background: '#ea2032',
@@ -88,6 +107,7 @@ export default function Cursor() {
       />
       <div
         ref={ringRef}
+        className="cursor-ring"
         style={{
           width: 36, height: 36,
           border: '1.5px solid #ea2032',

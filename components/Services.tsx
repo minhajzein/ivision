@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Building2, Calendar, Container, Home, ArrowRight, ChevronRight } from 'lucide-react';
 
@@ -52,12 +52,21 @@ const SERVICES = [
 
 export default function Services() {
   const [activeId, setActiveId] = useState('architecture');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 900px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   return (
     <section className="section-pad" style={{ background: 'var(--white-2)', overflow: 'hidden' }}>
       <div className="container">
         {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 'clamp(2rem,5vw,4rem)', flexWrap: 'wrap', gap: 20 }}>
+        <div className="services-header" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 'clamp(2rem,5vw,4rem)', flexWrap: 'wrap', gap: 20 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
               <div style={{ width: 40, height: 2, background: '#ea2032' }} />
@@ -76,14 +85,14 @@ export default function Services() {
         </div>
 
         {/* Desktop: Accordion-style cards */}
-        <div style={{ display: 'flex', gap: 0, minHeight: 480, border: '1px solid var(--white-3)' }}>
+        <div className="services-accordion" style={{ display: 'flex', gap: 0, minHeight: 480, border: '1px solid var(--white-3)' }}>
           {SERVICES.map((svc) => {
             const Icon = svc.icon;
-            const isActive = activeId === svc.id;
+            const isActive = isMobile || activeId === svc.id;
             return (
               <div
                 key={svc.id}
-                onMouseEnter={() => setActiveId(svc.id)}
+                onMouseEnter={() => !isMobile && setActiveId(svc.id)}
                 style={{
                   flex: isActive ? 4 : 1,
                   background: svc.dark ? 'var(--black)' : '#fff',
@@ -145,7 +154,7 @@ export default function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 style={{
+                  <h3 className="service-card-title" style={{
                     fontFamily: 'var(--font-display)',
                     fontSize: isActive ? 'clamp(1.4rem,2.5vw,2rem)' : '0.85rem',
                     fontWeight: 900,

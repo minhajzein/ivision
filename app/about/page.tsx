@@ -55,7 +55,7 @@ export default function AboutPage() {
         }} />
 
         {/* Giant background watermark */}
-        <div style={{
+        <div className="page-watermark" style={{
           position: 'absolute', right: '5%', top: '50%', transform: 'translateY(-50%)',
           fontFamily: 'var(--font-display)',
           fontSize: 'clamp(8rem,18vw,20rem)',
@@ -126,14 +126,12 @@ export default function AboutPage() {
         borderBottom: '1px solid var(--white-3)',
       }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
+          <div className="grid-12" style={{
             gap: 'clamp(3rem, 6vw, 6rem)',
             alignItems: 'center',
-          }}>
+          }} data-about-intro>
             {/* Left text */}
-            <div style={{ gridColumn: 'span 5' }}>
+            <div className="col-span-5">
               <div style={{ position: 'relative' }}>
                 {/* Giant watermark number */}
                 <div style={{
@@ -196,12 +194,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right: stat cards */}
-            <div style={{
-              gridColumn: 'span 7',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: 20,
-            }}>
+            <div className="col-span-7 grid-2-col" style={{ gap: 20 }}>
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -512,14 +505,12 @@ export default function AboutPage() {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
+          <div className="grid-12" style={{
             gap: 'clamp(3rem, 6vw, 5rem)',
             alignItems: 'center',
-          }}>
+          }} data-vision-grid>
             {/* Left content */}
-            <div style={{ gridColumn: 'span 7' }}>
+            <div className="col-span-7">
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
                 <Landmark color="#ea2032" size={22} />
                 <span style={{
@@ -577,7 +568,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right card */}
-            <div style={{ gridColumn: 'span 5', display: 'flex', justifyContent: 'center' }}>
+            <div className="col-span-5" style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{
                 border: '1px solid rgba(255,255,255,0.08)',
                 padding: 'clamp(2.5rem, 5vw, 4rem)',

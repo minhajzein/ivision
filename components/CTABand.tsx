@@ -21,7 +21,7 @@ export default function CTABand() {
       }} />
 
       {/* Giant watermark text */}
-      <div style={{
+      <div className="page-watermark" style={{
         position: 'absolute',
         right: '-5%',
         top: '50%',
@@ -40,7 +40,7 @@ export default function CTABand() {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div style={{
+        <div className="cta-band-inner" style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',

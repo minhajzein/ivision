@@ -67,7 +67,7 @@ export default function ServicesPage() {
           pointerEvents: 'none',
         }} />
         {/* Giant bg watermark */}
-        <div style={{
+        <div className="page-watermark" style={{
           position: 'absolute', right: '3%', bottom: '-10%',
           fontFamily: 'var(--font-display)',
           fontSize: 'clamp(8rem, 18vw, 20rem)',

@@ -31,7 +31,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 'clamp(2rem,5vw,5rem)', alignItems: 'start' }}>
+        <div className="grid-contact" style={{ gap: 'clamp(2rem,5vw,5rem)', alignItems: 'start' }}>
           {/* Left: Info */}
           <div className="fade-up">
             {[
@@ -136,7 +136,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                <div className="grid-2-col" style={{ gap: 16 }}>
                   <input
                     required
                     type="text"

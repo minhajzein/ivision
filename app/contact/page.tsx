@@ -64,7 +64,7 @@ export default function ContactPage() {
           pointerEvents: 'none',
         }} />
         {/* Giant bg watermark */}
-        <div style={{
+        <div className="page-watermark" style={{
           position: 'absolute', right: '3%', bottom: '-8%',
           fontFamily: 'var(--font-display)',
           fontSize: 'clamp(8rem,18vw,20rem)',
@@ -119,15 +119,12 @@ export default function ContactPage() {
         borderBottom: '1px solid var(--white-3)',
       }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
+          <div className="grid-12" style={{
             gap: 'clamp(3rem, 6vw, 6rem)',
             alignItems: 'start',
           }}>
-
             {/* ── LEFT: Info panel ─────────────────────────────── */}
-            <div style={{ gridColumn: 'span 5', display: 'flex', flexDirection: 'column', gap: 40 }}>
+            <div className="col-span-5" style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
               <div>
                 <div style={{ width: 48, height: 3, background: '#ea2032', marginBottom: 24 }} />
                 <h2 style={{
@@ -218,11 +215,7 @@ export default function ContactPage() {
                 }}>
                   Our team provides logistical delivery and structural setups across the entire Kingdom:
                 </p>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  gap: 10,
-                }}>
+                <div className="grid-2-col" style={{ gap: 10 }}>
                   {territories.map(t => (
                     <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       <ChevronRight size={12} color="#ea2032" style={{ flexShrink: 0 }} />
@@ -239,7 +232,7 @@ export default function ContactPage() {
             </div>
 
             {/* ── RIGHT: Form ───────────────────────────────────── */}
-            <div style={{ gridColumn: 'span 7' }}>
+            <div className="col-span-7">
               <AnimatePresence mode="wait">
                 {submitted ? (
                   <motion.div
@@ -347,7 +340,7 @@ export default function ContactPage() {
                         color: 'var(--gray-2)',
                         display: 'block', marginBottom: 16,
                       }}>1. Select Service Division *</label>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                      <div className="grid-2-col" style={{ gap: 12 }}>
                         {divisions.map((div) => (
                           <button
                             type="button"
@@ -392,7 +385,7 @@ export default function ContactPage() {
                         color: 'var(--gray-2)',
                         display: 'block', marginBottom: 16,
                       }}>2. Project Scale Estimation *</label>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
+                      <div className="grid-3-col" style={{ gap: 12 }}>
                         {scopes.map((sc) => (
                           <button
                             type="button"
@@ -440,7 +433,7 @@ export default function ContactPage() {
                         paddingBottom: 12,
                       }}>3. Your Representative Details</label>
 
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                      <div className="grid-2-col" style={{ gap: 14 }}>
                         {[
                           { type: 'text', placeholder: 'Representative Name *', key: 'name', required: true },
                           { type: 'email', placeholder: 'Corporate Email *', key: 'email', required: true },

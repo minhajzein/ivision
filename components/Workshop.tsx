@@ -144,7 +144,7 @@ export default function Workshop() {
                 </div>
 
                 {/* Mini stats row */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
+                <div className="grid-3-col" style={{ gap: 12 }}>
                   {[
                     { v: '3,000', u: 'sqm', l: 'Workshop Area' },
                     { v: '24/7', u: '', l: 'Operations' },

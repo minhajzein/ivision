@@ -45,7 +45,7 @@ export default function PortfolioPage() {
           pointerEvents: 'none',
         }} />
         {/* Giant bg watermark */}
-        <div style={{
+        <div className="page-watermark" style={{
           position: 'absolute', right: '3%', bottom: '-8%',
           fontFamily: 'var(--font-display)',
           fontSize: 'clamp(8rem,18vw,20rem)',

@@ -49,19 +49,7 @@ export default function EventsMediaService() {
           background: 'linear-gradient(135deg, rgba(234,32,50,0.07) 0%, transparent 60%)',
           pointerEvents: 'none',
         }} />
-        <div style={{
-          position: 'absolute', right: '5%', top: '50%', transform: 'translateY(-50%)',
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(8rem, 18vw, 20rem)',
-          fontWeight: 900,
-          color: 'rgba(255,255,255,0.03)',
-          textTransform: 'uppercase',
-          letterSpacing: '-0.05em',
-          lineHeight: 1,
-          userSelect: 'none',
-          zIndex: 1,
-          whiteSpace: 'nowrap',
-        }}>MEDIA</div>
+        <div className="page-watermark" style={{ position: 'absolute', right: '5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'var(--font-display)', fontSize: 'clamp(8rem, 18vw, 20rem)', fontWeight: 900, color: 'rgba(255,255,255,0.03)', textTransform: 'uppercase', letterSpacing: '-0.05em', lineHeight: 1, userSelect: 'none', zIndex: 1, whiteSpace: 'nowrap' }}>MEDIA</div>
 
         <div className="container" style={{ position: 'relative', zIndex: 5 }}>
           <div style={{
@@ -128,13 +116,8 @@ export default function EventsMediaService() {
         borderBottom: '1px solid var(--white-3)',
       }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(3rem, 6vw, 5rem)',
-            alignItems: 'start',
-          }}>
-            <div style={{ gridColumn: 'span 5' }}>
+          <div className="grid-12" style={{ gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'start' }}>
+            <div className="col-span-5">
               <div style={{ width: 48, height: 3, background: '#ea2032', marginBottom: 24 }} />
               <h2 style={{
                 fontFamily: 'var(--font-display)',
@@ -158,12 +141,7 @@ export default function EventsMediaService() {
               </p>
             </div>
 
-            <div style={{
-              gridColumn: 'span 7',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: 20,
-            }}>
+            <div className="col-span-7 grid-2-col" style={{ gap: 20 }}>
               {coreServices.map((srv, i) => {
                 const Icon = srv.icon;
                 return (
@@ -245,12 +223,7 @@ export default function EventsMediaService() {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 'clamp(3rem, 6vw, 5rem)',
-            alignItems: 'center',
-          }}>
+          <div className="grid-split-2" style={{ gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -319,7 +292,7 @@ export default function EventsMediaService() {
                 by our own technicians. We handle all logistics and assembly, reducing coordination
                 risks and keeping your event setups on schedule.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              <div className="grid-2-col" style={{ gap: 12 }}>
                 {specs.map((spec) => (
                   <div key={spec} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <CheckCircle size={14} color="#ea2032" style={{ flexShrink: 0 }} />
