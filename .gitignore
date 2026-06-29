@@ -56,6 +56,3 @@ coverage/
 
 # ── Misc ──────────────────────────────────────────────────
 *.pem
-
-# ── Large media (host separately — exceeds GitHub 100MB limit) ──
-public/videos/
