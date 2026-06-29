@@ -85,7 +85,8 @@ export default function PortfolioPage() {
               lineHeight: 1.75,
               maxWidth: 520,
             }}>
-              Explore a collection of key projects delivered across Dammam, Riyadh, and Jeddah.
+              Explore a collection of key projects delivered across Saudi Arabia —
+              from Riyadh and Jeddah to the Eastern Province.
               Utilising our unified in-house workshops, we merge architecture, branding, and modular
               builds to bypass traditional delay workflows.
             </p>

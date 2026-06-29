@@ -116,7 +116,7 @@ export default function ArchitectureService() {
               maxWidth: 580,
             }}>
               Integrated structural planning, architectural blueprints, and high-fidelity interior
-              fit-outs managed under a single unified project timeline — from Dammam to across the Kingdom.
+              fit-outs managed under a single unified project timeline — across the Kingdom of Saudi Arabia.
             </p>
           </motion.div>
         </div>

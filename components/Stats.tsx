@@ -2,10 +2,10 @@
 import { useRef, useEffect } from 'react';
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Projects Delivered', sub: 'Across Saudi Arabia' },
-  { value: 12, suffix: '+', label: 'Years of Excellence', sub: 'Since 2014' },
+  { value: 3600, suffix: '', label: 'Projects Delivered', sub: 'Across Saudi Arabia' },
+  { value: 18, suffix: '+', label: 'Years of Excellence', sub: 'Industry Experience' },
   { value: 100, suffix: '%', label: 'In-House Execution', sub: 'Dammam Workshop' },
-  { value: 50, suffix: '+', label: 'Industry Professionals', sub: 'Multi-Disciplinary Team' },
+  { value: 68, suffix: '', label: 'Industry Professionals', sub: 'Multi-Disciplinary Team' },
   { value: 4, suffix: '', label: 'Core Divisions', sub: 'All Under One Roof' },
 ];
 

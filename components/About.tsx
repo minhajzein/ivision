@@ -90,23 +90,23 @@ export default function About() {
           <div style={{ gridColumn: 'span 7', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
             {[
               {
-                num: '12+', label: 'Years Excellence',
-                desc: 'A decade-plus of delivering landmark projects across Saudi Arabia.',
+                num: '01', label: 'Unified Delivery',
+                desc: 'Architecture, events, modular fabrication, and real estate — one company, one timeline.',
                 delay: 0,
               },
               {
-                num: '500+', label: 'Projects Completed',
-                desc: 'From luxury fit-outs to modular site complexes, all in-house.',
+                num: '02', label: 'Kingdom-Wide Reach',
+                desc: 'Serving clients across Saudi Arabia with end-to-end project execution.',
                 delay: 1,
               },
               {
-                num: '100%', label: 'In-House Execution',
-                desc: 'Our Dammam workshop handles every fabrication step internally.',
+                num: '03', label: 'In-House Workshop',
+                desc: 'Fabrication, staging, and fit-out handled internally for quality and speed.',
                 delay: 2,
               },
               {
-                num: '50+', label: 'Professionals',
-                desc: 'Engineers, architects, media producers, and estate advisors.',
+                num: '04', label: 'Vision 2030 Aligned',
+                desc: 'Driving local content, industrial capability, and contracting innovation.',
                 delay: 3,
               },
             ].map((item) => (
@@ -135,7 +135,7 @@ export default function About() {
                   fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(2.5rem,5vw,4rem)',
                   fontWeight: 900,
-                  color: 'var(--black)',
+                  color: '#ea2032',
                   lineHeight: 1,
                   marginBottom: 8,
                 }}>{item.num}</div>
@@ -145,7 +145,7 @@ export default function About() {
                   fontWeight: 700,
                   letterSpacing: '3px',
                   textTransform: 'uppercase',
-                  color: '#ea2032',
+                  color: 'var(--black)',
                   marginBottom: 12,
                 }}>{item.label}</div>
                 <p style={{

@@ -11,7 +11,7 @@ const ITEMS = [
   '·',
   'Saudi Vision 2030',
   '·',
-  'Dammam, Eastern Province',
+  'Kingdom of Saudi Arabia',
   '·',
   'Turn-key Solutions',
   '·',

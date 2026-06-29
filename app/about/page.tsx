@@ -4,10 +4,10 @@ import { Shield, Users, Target, Rocket, Landmark, ArrowRight } from 'lucide-reac
 import Link from 'next/link';
 
 const stats = [
-  { value: '12+', label: 'Years of Excellence', sub: 'Since 2014' },
-  { value: '500+', label: 'Projects Completed', sub: 'Kingdom-wide' },
-  { value: '100%', label: 'In-House Execution', sub: 'Dammam Workshop' },
-  { value: '50+', label: 'Professional Staff', sub: 'Multi-disciplinary' },
+  { value: '18+', label: 'Years of Excellence', sub: 'Industry Experience' },
+  { value: '3600', label: 'Projects Completed', sub: 'Kingdom-wide' },
+  { value: '100%', label: 'In-House Execution', sub: 'Workshop Built' },
+  { value: '68', label: 'Professional Staff', sub: 'Multi-disciplinary' },
 ];
 
 const timeline = [
@@ -102,7 +102,7 @@ export default function AboutPage() {
               maxWidth: 620,
               marginBottom: 48,
             }}>
-              iVision is a premier multi-disciplinary contracting company based in Dammam,
+              iVision is a premier multi-disciplinary contracting company serving clients across
               Saudi Arabia. By integrating architecture, events production, custom fabrication,
               and real estate, we deliver turn-key solutions with unparalleled quality and efficiency.
             </p>

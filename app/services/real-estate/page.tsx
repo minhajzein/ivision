@@ -10,62 +10,160 @@ const coreServices = [
   { icon: FileCheck, title: 'Regulatory Compliance', desc: 'Ejaar system integration, municipality clearance filings, and civil defense certification.' },
 ];
 
-const highlights = [
-  { metric: '10+', label: 'Commercial Buildings Managed' },
-  { metric: '94%', label: 'Average Lease Renewal Rate' },
-  { metric: 'Dammam / Khobar', label: 'Primary Target Territories' },
-  { metric: '2030', label: 'Vision-Aligned Models' },
+const processSteps = [
+  { num: '01', title: 'Portfolio Assessment', desc: 'We review asset performance, tenant mix, lease terms, and regional market conditions across your holdings.' },
+  { num: '02', title: 'Advisory & Strategy', desc: 'Feasibility studies, yield optimization models, and leasing strategies aligned with Vision 2030 objectives.' },
+  { num: '03', title: 'Operations & Compliance', desc: 'Ejaar integration, municipality filings, facility management, and regulatory certification workflows.' },
+  { num: '04', title: 'Ongoing Management', desc: 'Tenant coordination, rent collection, maintenance oversight, and portfolio performance reporting.' },
+];
+
+const specs = [
+  'Dammam Commercial Zone',
+  'Al Khobar Business District',
+  'Jubail Industrial City',
+  'Riyadh Project Portfolios',
+  'Ejaar System Integration',
+  'Vision 2030 Alignment',
 ];
 
 export default function RealEstateService() {
   return (
-    <main className="bg-white font-body">
-      {/* Hero */}
-      <section className="bg-brand-black text-white pt-32 pb-20 relative overflow-hidden noise">
-        <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/10 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 font-display text-[12vw] font-black text-white/5 uppercase select-none leading-none z-0 pointer-events-none">
-          ASSETS
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex items-center gap-3 mb-8 text-[11px] font-ui font-semibold tracking-widest uppercase">
-            <Link href="/services" className="text-brand-gray hover:text-brand-red transition-colors duration-200">Services</Link>
-            <span className="text-brand-gray/40">/</span>
-            <span className="text-brand-red">Real Estate & Advisory</span>
+    <main style={{ background: '#fff', overflow: 'hidden' }}>
+
+      {/* ── HERO ─────────────────────────────────────────────────── */}
+      <section style={{
+        background: 'var(--black)',
+        color: '#fff',
+        paddingTop: 'clamp(9rem, 16vw, 13rem)',
+        paddingBottom: 'clamp(5rem, 10vw, 8rem)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'linear-gradient(to right,rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.015) 1px,transparent 1px)',
+          backgroundSize: '60px 60px',
+        }} />
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(234,32,50,0.07) 0%, transparent 60%)',
+          pointerEvents: 'none',
+        }} />
+        <div style={{
+          position: 'absolute', right: '5%', top: '50%', transform: 'translateY(-50%)',
+          fontFamily: 'var(--font-display)',
+          fontSize: 'clamp(8rem, 18vw, 20rem)',
+          fontWeight: 900,
+          color: 'rgba(255,255,255,0.03)',
+          textTransform: 'uppercase',
+          letterSpacing: '-0.05em',
+          lineHeight: 1,
+          userSelect: 'none',
+          zIndex: 1,
+          whiteSpace: 'nowrap',
+        }}>ASSETS</div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 5 }}>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 10,
+            marginBottom: 32,
+            fontFamily: 'var(--font-ui)', fontSize: 11, fontWeight: 600,
+            letterSpacing: '3px', textTransform: 'uppercase',
+          }}>
+            <Link href="/services" style={{
+              color: 'rgba(255,255,255,0.45)',
+              transition: 'color 0.2s',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#ea2032')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.45)')}
+            >Services</Link>
+            <span style={{ color: 'rgba(255,255,255,0.2)' }}>/</span>
+            <span style={{ color: '#ea2032' }}>Real Estate & Advisory</span>
           </div>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-4 mb-5">
-              <div className="w-10 h-10 bg-brand-red flex items-center justify-center flex-shrink-0"
-                style={{ clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px))' }}>
-                <Home size={18} className="text-white" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+            style={{ maxWidth: 800 }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
+              <div style={{
+                width: 40, height: 40, background: '#ea2032',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                clipPath: 'polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px))',
+              }}>
+                <Home size={18} color="#fff" />
               </div>
-              <span className="font-ui text-xs tracking-[4px] uppercase text-brand-red font-bold">Division 04</span>
+              <span style={{
+                fontFamily: 'var(--font-ui)', fontSize: 11, fontWeight: 700,
+                letterSpacing: '4px', textTransform: 'uppercase', color: '#ea2032',
+              }}>Division 04</span>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none mb-6">
+
+            <h1 className="display-lg" style={{ color: '#fff', marginBottom: 24, lineHeight: 0.95 }}>
               Real Estate &{' '}
-              <span className="text-brand-red">Property</span>{' '}
+              <span style={{ color: '#ea2032' }}>Property</span>{' '}
               Advisory
             </h1>
-            <p className="font-body text-brand-gray text-sm leading-relaxed max-w-xl">
-              Commercial leasing management, yield optimization advisory, and comprehensive real estate facility workflows across the Eastern Province — aligned with Saudi Vision 2030 development models.
+
+            <p style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 'clamp(0.9rem, 1.2vw, 1.1rem)',
+              color: 'rgba(255,255,255,0.55)',
+              lineHeight: 1.75,
+              maxWidth: 580,
+            }}>
+              Commercial leasing management, yield optimization advisory, and comprehensive real
+              estate facility workflows across the Eastern Province — aligned with Saudi Vision 2030
+              development models.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Core Capabilities */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-5">
-              <div className="w-12 h-1 bg-brand-red mb-6" />
-              <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-brand-black mb-4">
-                Corporate Property Advisory
-              </h2>
-              <p className="font-body text-sm text-brand-gray-2 leading-relaxed">
-                Managing commercial real estate requires coordination between legal, operations, and facility teams. iVision provides integrated services, handling tenant positioning, regulatory compliance, and facility maintenance through a single point of contact.
+      {/* ── CORE CAPABILITIES ────────────────────────────────────── */}
+      <section style={{
+        padding: 'clamp(5rem, 10vw, 9rem) 0',
+        background: '#fff',
+        borderBottom: '1px solid var(--white-3)',
+      }}>
+        <div className="container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(12, 1fr)',
+            gap: 'clamp(3rem, 6vw, 5rem)',
+            alignItems: 'start',
+          }}>
+            <div style={{ gridColumn: 'span 5' }}>
+              <div style={{ width: 48, height: 3, background: '#ea2032', marginBottom: 24 }} />
+              <h2 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
+                fontWeight: 900,
+                textTransform: 'uppercase',
+                letterSpacing: '-0.02em',
+                color: 'var(--black)',
+                marginBottom: 20,
+              }}>Corporate Property Advisory</h2>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
+                color: 'var(--gray-2)',
+                lineHeight: 1.75,
+              }}>
+                Managing commercial real estate requires coordination between legal, operations, and
+                facility teams. iVision provides integrated services, handling tenant positioning,
+                regulatory compliance, and facility maintenance through a single point of contact.
               </p>
             </div>
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+            <div style={{
+              gridColumn: 'span 7',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: 20,
+            }}>
               {coreServices.map((srv, i) => {
                 const Icon = srv.icon;
                 return (
@@ -75,15 +173,49 @@ export default function RealEstateService() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="border border-brand-white-3 p-6 bg-brand-white-2 group hover:border-brand-red hover:shadow-lg transition-all duration-300"
-                    style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px))' }}
+                    style={{
+                      border: '1px solid var(--white-3)',
+                      padding: 'clamp(1.5rem, 2.5vw, 2rem)',
+                      background: 'var(--white-2)',
+                      clipPath: 'polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))',
+                      transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
+                    }}
+                    onMouseEnter={e => {
+                      const el = e.currentTarget as HTMLDivElement;
+                      el.style.borderColor = '#ea2032';
+                      el.style.boxShadow = '0 12px 32px rgba(234,32,50,0.08)';
+                      el.style.transform = 'translateY(-3px)';
+                    }}
+                    onMouseLeave={e => {
+                      const el = e.currentTarget as HTMLDivElement;
+                      el.style.borderColor = 'var(--white-3)';
+                      el.style.boxShadow = 'none';
+                      el.style.transform = 'translateY(0)';
+                    }}
                   >
-                    <div className="w-10 h-10 bg-brand-black flex items-center justify-center mb-4"
-                      style={{ clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px))' }}>
-                      <Icon className="text-brand-red" size={18} />
+                    <div style={{
+                      width: 40, height: 40, background: 'var(--black)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      marginBottom: 16,
+                      clipPath: 'polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px))',
+                    }}>
+                      <Icon size={18} color="#ea2032" />
                     </div>
-                    <h3 className="font-display text-sm font-bold uppercase text-brand-black tracking-wide mb-2">{srv.title}</h3>
-                    <p className="font-body text-xs text-brand-gray-2 leading-relaxed">{srv.desc}</p>
+                    <h3 style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: 'clamp(0.9rem, 1.2vw, 1.1rem)',
+                      fontWeight: 900,
+                      textTransform: 'uppercase',
+                      color: 'var(--black)',
+                      letterSpacing: '0.01em',
+                      marginBottom: 10,
+                    }}>{srv.title}</h3>
+                    <p style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 12,
+                      color: 'var(--gray-2)',
+                      lineHeight: 1.65,
+                    }}>{srv.desc}</p>
                   </motion.div>
                 );
               })}
@@ -92,83 +224,268 @@ export default function RealEstateService() {
         </div>
       </section>
 
-      {/* Stats + Focus Section */}
-      <section className="py-20 bg-brand-black text-white relative overflow-hidden noise">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-red/8 to-transparent pointer-events-none" />
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {highlights.map((h, i) => (
-              <motion.div
-                key={h.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border border-brand-white-3/20 p-6 text-center"
-                style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))' }}
-              >
-                <div className="font-display text-3xl font-black text-brand-red mb-2">{h.metric}</div>
-                <div className="font-ui text-[10px] text-brand-gray tracking-wider uppercase font-semibold">{h.label}</div>
-              </motion.div>
-            ))}
-          </div>
+      {/* ── TECHNICAL SPECS ──────────────────────────────────────── */}
+      <section style={{
+        padding: 'clamp(5rem, 10vw, 9rem) 0',
+        background: 'var(--black)',
+        color: '#fff',
+        position: 'relative',
+        overflow: 'hidden',
+        borderBottom: '1px solid rgba(255,255,255,0.04)',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(234,32,50,0.1) 0%, transparent 60%)',
+          pointerEvents: 'none',
+        }} />
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'linear-gradient(to right,rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.015) 1px,transparent 1px)',
+          backgroundSize: '60px 60px',
+        }} />
 
-          {/* Market Focus */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-5">
-              <div className="flex items-center gap-3">
-                <MapPin className="text-brand-red flex-shrink-0" size={20} />
-                <span className="font-ui text-xs tracking-[3px] uppercase text-brand-red font-bold">Market Focus</span>
-              </div>
-              <h2 className="font-display text-3xl font-bold uppercase tracking-tight leading-tight">
-                Eastern Province Coverage
-              </h2>
-              <p className="font-body text-sm text-brand-gray leading-relaxed">
-                Our leasing and management teams operate primarily in the Dammam, Khobar, and Jubail commercial zones. We track regional demand patterns and regulatory requirements to help optimize asset performance.
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 'clamp(3rem, 6vw, 5rem)',
+            alignItems: 'center',
+          }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              style={{
+                border: '1px solid rgba(234,32,50,0.2)',
+                background: 'rgba(255,255,255,0.03)',
+                backdropFilter: 'blur(12px)',
+                padding: 'clamp(2.5rem, 5vw, 4rem)',
+                clipPath: 'polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px))',
+                textAlign: 'center',
+              }}
+            >
+              <span style={{
+                fontFamily: 'var(--font-ui)', fontSize: 10, fontWeight: 700,
+                letterSpacing: '4px', textTransform: 'uppercase', color: '#ea2032',
+                display: 'block', marginBottom: 20,
+              }}>Aligned With</span>
+              <div style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(4rem, 10vw, 8rem)',
+                fontWeight: 900,
+                color: 'rgba(255,255,255,0.05)',
+                textTransform: 'uppercase',
+                lineHeight: 1,
+                userSelect: 'none',
+                marginBottom: 8,
+              }}>VISION</div>
+              <div style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(3rem, 8vw, 5rem)',
+                fontWeight: 900,
+                color: '#ea2032',
+                lineHeight: 1,
+                marginBottom: 24,
+              }}>2030</div>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 13,
+                color: 'rgba(255,255,255,0.45)',
+                lineHeight: 1.7,
+                maxWidth: 340,
+                margin: '0 auto',
+              }}>
+                Our real estate advisory practices align with Kingdom objectives, prioritizing
+                sustainable commercial growth and smart city development.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                {['Dammam Commercial Zone', 'Al Khobar Business District', 'Jubail Industrial City', 'Riyadh Project Portfolios'].map((zone) => (
-                  <div key={zone} className="flex items-center gap-2 text-sm font-semibold text-brand-white-2">
-                    <CheckCircle size={14} className="text-brand-red flex-shrink-0" />
-                    {zone}
+            </motion.div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ flexShrink: 0, display: 'flex' }}><MapPin color="#ea2032" size={20} /></span>
+                <span style={{
+                  fontFamily: 'var(--font-ui)', fontSize: 10, fontWeight: 700,
+                  letterSpacing: '3px', textTransform: 'uppercase', color: '#ea2032',
+                }}>Market Focus</span>
+              </div>
+              <h2 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
+                fontWeight: 900,
+                textTransform: 'uppercase',
+                letterSpacing: '-0.02em',
+                lineHeight: 1.05,
+              }}>Eastern Province Coverage</h2>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
+                color: 'rgba(255,255,255,0.55)',
+                lineHeight: 1.75,
+              }}>
+                Our leasing and management teams operate primarily in the Dammam, Khobar, and Jubail
+                commercial zones. We track regional demand patterns and regulatory requirements to
+                help optimize asset performance.
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                {specs.map((spec) => (
+                  <div key={spec} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <CheckCircle size={14} color="#ea2032" style={{ flexShrink: 0 }} />
+                    <span style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: 'rgba(255,255,255,0.8)',
+                    }}>{spec}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="border border-brand-red/20 bg-brand-black-2 p-10 relative"
-              style={{ clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))' }}
-            >
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(234,32,50,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(234,32,50,0.04)_1px,transparent_1px)] bg-[size:20px_20px]" />
-              <div className="relative z-10 text-center py-6">
-                <span className="font-ui text-[10px] tracking-[4px] text-brand-red uppercase font-bold block mb-4">Aligned With</span>
-                <div className="font-display text-5xl font-black text-white/10 uppercase select-none leading-none mb-4">VISION</div>
-                <div className="font-display text-6xl font-black text-brand-red leading-none mb-6">2030</div>
-                <p className="font-body text-sm text-brand-gray leading-relaxed max-w-xs mx-auto">
-                  Our real estate advisory practices align with Kingdom objectives, prioritizing sustainable commercial growth and smart city development.
-                </p>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-brand-red text-white py-16 relative overflow-hidden noise">
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="font-display text-3xl font-bold uppercase mb-4 tracking-tight">Looking for Property Management or Leasing Solutions?</h2>
-          <p className="font-body text-sm text-white/80 max-w-xl mx-auto mb-8 leading-relaxed">
-            Contact our property advisory group. We provide feasibility studies, lease assessments, and portfolio coordinate management models.
+      {/* ── PROCESS STEPS ────────────────────────────────────────── */}
+      <section style={{
+        padding: 'clamp(5rem, 10vw, 9rem) 0',
+        background: '#fff',
+        borderBottom: '1px solid var(--white-3)',
+      }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginBottom: 20 }}>
+              <div style={{ width: 40, height: 1, background: '#ea2032' }} />
+              <span style={{
+                fontFamily: 'var(--font-ui)', fontSize: 10, fontWeight: 700,
+                letterSpacing: '4px', textTransform: 'uppercase', color: '#ea2032',
+              }}>Our Process</span>
+              <div style={{ width: 40, height: 1, background: '#ea2032' }} />
+            </div>
+            <h2 className="display-sm" style={{ color: 'var(--black)', marginBottom: 16 }}>
+              The Advisory Lifecycle
+            </h2>
+            <p style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
+              color: 'var(--gray-2)',
+              maxWidth: 420,
+              margin: '0 auto',
+              lineHeight: 1.7,
+            }}>A structured roadmap from portfolio assessment to ongoing property management.</p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: 20,
+          }}>
+            {processSteps.map((step, i) => (
+              <motion.div
+                key={step.num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                style={{
+                  background: 'var(--white-2)',
+                  border: '1px solid var(--white-3)',
+                  padding: 'clamp(1.75rem, 3vw, 2.5rem)',
+                  clipPath: 'polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))',
+                  transition: 'border-color 0.3s ease, transform 0.3s ease',
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.borderColor = '#ea2032';
+                  el.style.transform = 'translateY(-3px)';
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.borderColor = 'var(--white-3)';
+                  el.style.transform = 'translateY(0)';
+                }}
+              >
+                <div style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                  fontWeight: 900,
+                  color: '#ea2032',
+                  lineHeight: 1,
+                  marginBottom: 16,
+                }}>{step.num}</div>
+                <h3 style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(0.9rem, 1.2vw, 1.1rem)',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  color: 'var(--black)',
+                  marginBottom: 10,
+                }}>{step.title}</h3>
+                <p style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 12,
+                  color: 'var(--gray-2)',
+                  lineHeight: 1.65,
+                }}>{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA BAND ─────────────────────────────────────────────── */}
+      <section style={{
+        padding: 'clamp(4rem, 8vw, 7rem) 0',
+        background: '#ea2032',
+        color: '#fff',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'linear-gradient(to right,rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.05) 1px,transparent 1px)',
+          backgroundSize: '40px 40px',
+        }} />
+        <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+          <h2 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(1.8rem, 4vw, 3.5rem)',
+            fontWeight: 900,
+            textTransform: 'uppercase',
+            letterSpacing: '-0.02em',
+            marginBottom: 16,
+          }}>Looking for Property Management or Leasing Solutions?</h2>
+          <p style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
+            color: 'rgba(255,255,255,0.8)',
+            maxWidth: 520,
+            margin: '0 auto 36px',
+            lineHeight: 1.7,
+          }}>
+            Contact our property advisory group. We provide feasibility studies, lease assessments,
+            and portfolio coordinate management models.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-widest bg-brand-black text-white px-8 py-4 hover:bg-white hover:text-brand-red transition-all duration-300"
-            style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))' }}
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 10,
+              fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 700,
+              letterSpacing: '2px', textTransform: 'uppercase',
+              background: 'var(--black)', color: '#fff',
+              padding: '16px 40px',
+              clipPath: 'polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))',
+              transition: 'background 0.2s ease, color 0.2s ease',
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = '#fff';
+              el.style.color = '#ea2032';
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = 'var(--black)';
+              el.style.color = '#fff';
+            }}
           >
             Consult Our Real Estate Team <ArrowRight size={14} />
           </Link>
@@ -177,4 +494,3 @@ export default function RealEstateService() {
     </main>
   );
 }
-

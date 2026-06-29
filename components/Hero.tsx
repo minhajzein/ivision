@@ -138,7 +138,7 @@ export default function Hero() {
       </div>
 
       {/* Two-column hero layout */}
-      <div className="container" style={{
+      <div className="container hero-grid" style={{
         position: 'relative', zIndex: 5,
         paddingTop: 120, paddingBottom: 100,
         display: 'grid',
@@ -156,15 +156,24 @@ export default function Hero() {
               fontFamily: 'var(--font-ui)', fontSize: 11, fontWeight: 700,
               letterSpacing: '4px', textTransform: 'uppercase', color: '#ea2032'
             }}>
-              Dammam, Saudi Arabia
+              Kingdom of Saudi Arabia
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="display-xl" style={{ color: '#fff', marginBottom: 24, lineHeight: 0.95 }}>
-            Build.<br />
-            Brand.<br />
-            <span style={{ color: '#ea2032' }}>Deliver.</span>
+          <h1
+            className="display-xl"
+            style={{
+              color: '#fff',
+              marginBottom: 24,
+              lineHeight: 0.95,
+              fontSize: 'clamp(2.75rem, 5.5vw, 5.25rem)',
+            }}
+          >
+            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>From&nbsp;Vision</span>
+            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
+              to&nbsp;<span style={{ color: '#ea2032' }}>Reality.</span>
+            </span>
           </h1>
 
           {/* Rotating word */}
@@ -215,41 +224,6 @@ export default function Hero() {
             <Link href="/portfolio" className="btn-outline-white">
               View Portfolio
             </Link>
-          </div>
-
-          {/* Stats Strip */}
-          <div style={{
-            display: 'flex',
-            gap: 40,
-            marginTop: 64,
-            paddingTop: 36,
-            borderTop: '1px solid rgba(255,255,255,0.08)',
-            flexWrap: 'wrap',
-          }}>
-            {[
-              { v: '12+', l: 'Years' },
-              { v: '500+', l: 'Projects' },
-              { v: '100%', l: 'In-House' },
-              { v: '50+', l: 'Professionals' },
-            ].map(s => (
-              <div key={s.l}>
-                <div style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(2rem,4vw,3rem)',
-                  fontWeight: 900,
-                  color: '#fff',
-                  lineHeight: 1,
-                }}>{s.v}</div>
-                <div style={{
-                  fontFamily: 'var(--font-ui)',
-                  fontSize: 10,
-                  letterSpacing: '3px',
-                  textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.4)',
-                  marginTop: 6,
-                }}>{s.l}</div>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -314,6 +288,12 @@ export default function Hero() {
         <div className="scroll-line" />
         <ChevronDown size={14} color="#fff" />
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .hero-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

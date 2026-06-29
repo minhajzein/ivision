@@ -64,20 +64,58 @@ export default function Footer() {
             }}>
               Saudi Arabia's premier multi-disciplinary contracting company. 
               Architecture, events, modular fabrication, and real estate — 
-              delivered in-house from Dammam.
+              delivered in-house across the Kingdom.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                <MapPin size={12} color="#ea2032" style={{ marginTop: 3, flexShrink: 0 }} />
+                <div style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 12,
+                  color: 'rgba(255,255,255,0.4)',
+                  lineHeight: 1.6,
+                }}>
+                  <div>4571, 9th Street, Al Adamah, 7758</div>
+                  <div>Dammam 32242- K S A</div>
+                  <div>M : 0503913735</div>
+                </div>
+              </div>
               {[
-                { icon: MapPin, text: 'Dammam, Eastern Province, KSA' },
-                { icon: Phone, text: '+966 50 000 0000' },
-                { icon: Mail, text: 'info@ivision.sa' },
-              ].map(({ icon: Icon, text }) => (
+                { icon: Phone, text: '0503913735' },
+                { icon: Mail, text: 'info@ivisionads.com', href: 'mailto:info@ivisionads.com' },
+              ].map(({ icon: Icon, text, href }) => (
                 <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                   <Icon size={12} color="#ea2032" />
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{text}</span>
+                  {href ? (
+                    <a
+                      href={href}
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: 12,
+                        color: 'rgba(255,255,255,0.4)',
+                        textDecoration: 'none',
+                      }}
+                    >{text}</a>
+                  ) : (
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{text}</span>
+                  )}
                 </div>
               ))}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <ArrowUpRight size={12} color="#ea2032" />
+                <a
+                  href="https://www.ivisionads.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 12,
+                    color: 'rgba(255,255,255,0.4)',
+                    textDecoration: 'none',
+                  }}
+                >www.ivisionads.com</a>
+              </div>
             </div>
           </div>
 
@@ -176,7 +214,7 @@ export default function Footer() {
             © {year} iVision Contracting Co. All rights reserved.
           </span>
           <span style={{ fontFamily: 'var(--font-ui)', fontSize: 10, color: 'rgba(255,255,255,0.25)', letterSpacing: '1px' }}>
-            Dammam · Riyadh · Jeddah · Kingdom of Saudi Arabia
+            Serving clients across the Kingdom of Saudi Arabia
           </span>
         </div>
       </div>

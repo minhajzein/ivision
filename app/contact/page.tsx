@@ -17,9 +17,9 @@ const scopes = [
 ];
 
 const contactItems = [
-  { icon: MapPin, label: 'Address', value: 'Dammam, Eastern Province\nSaudi Arabia' },
-  { icon: Phone, label: 'Phone Support', value: '+966 50 000 0000' },
-  { icon: Mail, label: 'Email Inquiry', value: 'info@ivision.sa' },
+  { icon: MapPin, label: 'Address', value: '4571, 9th Street, Al Adamah, 7758\nDammam 32242- K S A\nM : 0503913735' },
+  { icon: Phone, label: 'Phone Support', value: '0503913735' },
+  { icon: Mail, label: 'Email Inquiry', value: 'info@ivisionads.com' },
 ];
 
 const territories = ['Eastern Province (HQ)', 'Riyadh Central Region', 'Western Province (Jeddah)', 'Northern & Southern Districts'];
@@ -106,7 +106,7 @@ export default function ContactPage() {
               maxWidth: 540,
             }}>
               Whether you need a full interior fit-out, modular site offices, or stages for a
-              corporate exhibition in Dammam, our estimators are ready to help.
+              corporate exhibition anywhere in Saudi Arabia, our estimators are ready to help.
             </p>
           </motion.div>
         </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   lineHeight: 1.75,
                 }}>
                   Connect directly with our division heads or schedule an appointment to visit
-                  our fabrication workshop in Dammam.
+                  our headquarters.
                 </p>
               </div>
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ),
   title: "iVision — Build. Brand. Deliver.",
   description:
-    "iVision is a multi-disciplinary contracting company in Dammam, Saudi Arabia specializing in Architecture, Events & Media, Portable Cabins, and Real Estate.",
+    "iVision is a multi-disciplinary contracting company in Saudi Arabia specializing in Architecture, Events & Media, Portable Cabins, and Real Estate.",
   keywords: [
     "iVision",
     "architecture",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     "media",
     "portable cabin",
     "real estate",
-    "Dammam",
     "Saudi Arabia",
+    "Kingdom of Saudi Arabia",
     "contracting",
   ],
   icons: {
