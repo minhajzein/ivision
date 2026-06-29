@@ -1,7 +1,7 @@
 'use client';
 
 const VIDEOS = [
-  { src: '/videos/0.mov', title: 'Project Film 01' },
+  { src: '/videos/0.mp4', title: 'Project Film 01' },
   { src: '/videos/1.mp4', title: 'Project Film 02' },
   { src: '/videos/2.mp4', title: 'Project Film 03' },
   { src: '/videos/3.mp4', title: 'Project Film 04' },
