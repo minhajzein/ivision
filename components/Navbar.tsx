@@ -60,10 +60,12 @@ export default function Navbar() {
             <Image
               src="/logo-white.png"
               alt="iVision"
-              width={140}
-              height={44}
-              style={{ height: 36, width: 'auto', objectFit: 'contain' }}
+              width={180}
+              height={56}
+              style={{ height: 48, width: 'auto', objectFit: 'contain' }}
               priority
+              loading="eager"
+              fetchPriority="high"
             />
           </Link>
 
@@ -147,9 +149,9 @@ export default function Navbar() {
             <Image
               src="/logo-white.png"
               alt="iVision"
-              width={120}
-              height={38}
-              style={{ height: 32, width: 'auto', objectFit: 'contain' }}
+              width={150}
+              height={48}
+              style={{ height: 40, width: 'auto', objectFit: 'contain' }}
             />
           </div>
 
