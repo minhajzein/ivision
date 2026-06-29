@@ -19,7 +19,7 @@ const scopes = [
 const contactItems = [
   { icon: MapPin, label: 'Address', value: '4571, 9th Street, Al Adamah, 7758\nDammam 32242- K S A\nM : 0503913735' },
   { icon: Phone, label: 'Phone Support', value: '0503913735' },
-  { icon: Mail, label: 'Email Inquiry', value: 'info@ivisionads.com' },
+  { icon: Mail, label: 'Email Inquiry', value: 'sskhan@ivisionads.com' },
 ];
 
 const territories = ['Eastern Province (HQ)', 'Riyadh Central Region', 'Western Province (Jeddah)', 'Northern & Southern Districts'];

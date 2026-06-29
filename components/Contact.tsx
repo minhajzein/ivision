@@ -37,7 +37,7 @@ export default function Contact() {
             {[
               { icon: MapPin, label: 'Address', value: '4571, 9th Street, Al Adamah, 7758\nDammam 32242- K S A\nM : 0503913735' },
               { icon: Phone, label: 'Phone', value: '0503913735' },
-              { icon: Mail, label: 'Email', value: 'info@ivisionads.com' },
+              { icon: Mail, label: 'Email', value: 'sskhan@ivisionads.com' },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} style={{
                 display: 'flex', gap: 16, alignItems: 'flex-start',

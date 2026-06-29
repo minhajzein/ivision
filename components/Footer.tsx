@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
               {[
                 { icon: Phone, text: '0503913735' },
-                { icon: Mail, text: 'info@ivisionads.com', href: 'mailto:info@ivisionads.com' },
+                { icon: Mail, text: 'sskhan@ivisionads.com', href: 'mailto:sskhan@ivisionads.com' },
               ].map(({ icon: Icon, text, href }) => (
                 <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                   <Icon size={12} color="#ea2032" />
